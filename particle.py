@@ -14,3 +14,17 @@ class Particle:
         # Initial velocity and acceleration set to be zero
         self.vel = np.zeros((2,))
         self.acc = np.zeros((2,))
+
+class Molecule: 
+    """Stores information about a molecule with mass, position, and velocity."""
+
+    def __init__(self, particle_1_pos_tuple, particle_2_pos_tuple, SpringConstant, L_Theta):
+        self.p1 = particle_1_pos_tuple
+        self.p2 = particle_2_pos_tuple
+        self.k = SpringConstant
+        self.len = L_Theta
+
+    def get_disp1(self):
+        return self.p1 - self.p2 
+
+
